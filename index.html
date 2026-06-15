@@ -1,0 +1,69 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Karamoja GoldTrace</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main id="loginView" class="login-shell">
+      <section class="login-panel">
+        <div>
+          <p class="eyebrow">Karamoja GoldTrace</p>
+          <h1>Certified gold supply-chain tracking</h1>
+          <p class="muted">Trace ore allocations, escrow milestones, geo-fenced mining blocks, ethical audits, and fair-trade value from cooperative to export.</p>
+        </div>
+        <form id="loginForm" class="login-form">
+          <label>Email <input id="email" type="email" value="stella.nabachwa@goldtrace.ug" required /></label>
+          <label>Password <input id="password" type="password" value="GoldTrace!2026" required /></label>
+          <button type="submit">Sign in securely</button>
+          <p id="loginError" class="error"></p>
+        </form>
+      </section>
+    </main>
+
+    <main id="appView" class="app hidden">
+      <aside class="sidebar">
+        <div class="brand">
+          <span class="mark">GT</span>
+          <div>
+            <strong>Karamoja<br />GoldTrace</strong>
+            <small>Fair-trade ledger</small>
+          </div>
+        </div>
+        <nav>
+          <button class="nav active" data-view="dashboard"><span>⌂</span>Command center</button>
+          <button class="nav" data-view="batches"><span>◇</span>Gold lots</button>
+          <button class="nav" data-view="blocks"><span>✣</span>Mining blocks</button>
+          <button class="nav" data-view="escrow"><span>◎</span>Escrow desk</button>
+          <button class="nav" data-view="audits"><span>✓</span>Ethical audits</button>
+          <button class="nav" data-view="prices"><span>↗</span>Price fabric</button>
+          <button class="nav" data-view="export"><span>▣</span>Export readiness</button>
+        </nav>
+        <button id="logoutBtn" class="ghost">Log out</button>
+      </aside>
+
+      <section class="content">
+        <header class="topbar">
+          <div>
+            <p id="roleLabel" class="eyebrow"></p>
+            <h2 id="viewTitle">Dashboard</h2>
+          </div>
+          <div class="actions">
+            <button id="refreshBtn" class="secondary">Refresh</button>
+          </div>
+        </header>
+
+        <section id="dashboard" class="view active"></section>
+        <section id="batches" class="view"></section>
+        <section id="escrow" class="view"></section>
+        <section id="blocks" class="view"></section>
+        <section id="audits" class="view"></section>
+        <section id="prices" class="view"></section>
+        <section id="export" class="view"></section>
+      </section>
+    </main>
+
+    <script src="/app.js"></script>
+  </body>
+</html>
