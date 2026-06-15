@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: karamoja-goldtrace
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python backend/app.py
+    envVars:
+      - key: GOLDTRACE_SECRET
+        generateValue: true
